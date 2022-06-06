@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState, useMemo} from 'react';
+import  List from './List';
 
 function mapItems(items) {
-    return items.map((value, i) => {{key:i.toString(), value}});
+    return items.map((value, i) => ({key:i.toString(), value}));
 }
 
 const array = new Array(100).fill(null).map((value, i) => `Item ${i}`);
@@ -11,8 +12,8 @@ function filterAndSort(text, asc) {
         .filter((i) => text.length === 0 || i.includes(text))
         .sort(
             asc 
-                ? (a, b) => (a > b ? 1 : a < b ? -1 : 0)
-                : (a, b) => (b > a ? 1 : b < a ? -1 : 0)
+                ? (a, b) => (a > b ? 1 : 0)
+                : (a, b) => (b > a ? 1 : 0)
         );
 }
 

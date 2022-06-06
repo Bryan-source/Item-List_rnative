@@ -13,5 +13,19 @@ export default StyleSheet.create({
         color: "slategray",
         backgroundColor: "ghostwhite",
         textAlign: "center",
+    },
+
+    filter: {
+        height: 40,
+        width: 200
+    },
+
+    controls: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 10,
+        backgroundColor: "white",
     }
 })
